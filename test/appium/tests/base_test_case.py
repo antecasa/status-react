@@ -88,7 +88,7 @@ class AbstractTestCase:
 
     @property
     def implicitly_wait(self):
-        return 10
+        return 8
 
     def update_test_info_dict(self):
         test_data.test_info[test_data.test_name] = dict()
