@@ -15,16 +15,21 @@
   (re-frame/dispatch [:update-transactions])
   db)
 
+(def transaction-send-default
+  {:symbol :ETH
+   :gas    ethereum/default-transaction-gas})
+
 (defmethod navigation/preload-data! :wallet-request-transaction
   [db [event]]
   (if (= event :navigate-back)
     db
     (-> db
         (update :wallet dissoc :request-transaction)
-        (assoc-in [:wallet :send-transaction] db/transaction-send-default))))
+        (assoc-in [:wallet :send-transaction] transaction-send-default))))
 
 (defmethod navigation/preload-data! :wallet-send-transaction
   [db [event]]
+  (re-frame/dispatch [:wallet/update-gas-price])
   (if (= event :navigate-back)
     db
-    (assoc-in db [:wallet :send-transaction] db/transaction-send-default)))
+    (assoc-in db [:wallet :send-transaction] transaction-send-default)))
