@@ -2112,6 +2112,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = DTX7Z4U3YA;
+				EXCLUDED_SOURCE_FILE_NAMES = "$(SRCROOT)/../node_modules/react-native-camera/ios/FaceDetector";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../modules/react-native-status/ios/RCTStatus",
 					"$(inherited)",
@@ -2169,6 +2170,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = DTX7Z4U3YA;
+				EXCLUDED_SOURCE_FILE_NAMES = "$(SRCROOT)/../node_modules/react-native-camera/ios/FaceDetector";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../modules/react-native-status/ios/RCTStatus",
 					"$(inherited)",
